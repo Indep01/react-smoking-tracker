@@ -1,1 +1,1 @@
-self.__REACT_LOADABLE_MANIFEST="{\"app\\\\page.tsx -> @/components/ConsumptionChart\":{\"id\":\"app\\\\page.tsx -> @/components/ConsumptionChart\",\"files\":[\"static/chunks/_app-pages-browser_components_ConsumptionChart_tsx.js\"]}}"
+self.__REACT_LOADABLE_MANIFEST='{"app\\\\page.tsx -> @/components/ConsumptionChart":{"id":5967,"files":["static/chunks/ca377847.7a52fd24825ef1cc.js","static/chunks/884.fa9b0c7e7999bd7b.js","static/chunks/967.c92420a2ad70bece.js"]}}';

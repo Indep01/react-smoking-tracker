@@ -54,7 +54,7 @@ export default function ConsumptionChart({ data, period }: Props) {
             legend: { display: false },
             tooltip: {
               callbacks: {
-                label: (ctx) => `${ctx.parsed.y} cigarette${ctx.parsed.y > 1 ? 's' : ''}`,
+                label: (ctx) =>{ const v = ctx.parsed.y ?? 0; return `${v} cigarette${v > 1 ? 's' : ''}` },
               },
             },
           },
