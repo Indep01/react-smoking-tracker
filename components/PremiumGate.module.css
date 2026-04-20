@@ -1,0 +1,54 @@
+.gate {
+  background: #f5f4f0;
+  border: 0.5px solid rgba(136,135,128,0.3);
+  border-radius: 14px;
+  padding: 1.5rem 1.25rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+@media (prefers-color-scheme: dark) {
+  .gate { background: #1e1e1c; }
+}
+
+.icon { font-size: 28px; }
+
+.title {
+  font-size: 15px;
+  font-weight: 500;
+  color: #1a1a18;
+}
+
+@media (prefers-color-scheme: dark) {
+  .title { color: #f0ede6; }
+}
+
+.sub {
+  font-size: 13px;
+  color: #888780;
+  max-width: 260px;
+  line-height: 1.5;
+}
+
+.btn {
+  margin-top: 8px;
+  padding: 10px 24px;
+  border-radius: 10px;
+  border: none;
+  background: #1a1a18;
+  color: #f0ede6;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  font-family: inherit;
+  transition: opacity 0.15s;
+}
+
+.btn:hover { opacity: 0.8; }
+
+@media (prefers-color-scheme: dark) {
+  .btn { background: #f0ede6; color: #1a1a18; }
+}

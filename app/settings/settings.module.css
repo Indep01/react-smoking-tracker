@@ -1,0 +1,225 @@
+.main {
+  max-width: 430px;
+  margin: 0 auto;
+  padding: 0 0 3rem;
+  font-family: 'DM Sans', -apple-system, sans-serif;
+  min-height: 100dvh;
+  background: #faf9f6;
+  color: #1a1a18;
+}
+
+@media (prefers-color-scheme: dark) {
+  .main { background: #141412; color: #f0ede6; }
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.25rem 1.25rem 1rem;
+  border-bottom: 0.5px solid rgba(136,135,128,0.25);
+}
+
+.back {
+  background: none;
+  border: none;
+  font-size: 20px;
+  color: #888780;
+  cursor: pointer;
+  padding: 4px 8px 4px 0;
+  font-family: inherit;
+}
+
+.title {
+  font-size: 17px;
+  font-weight: 500;
+  color: #1a1a18;
+}
+
+@media (prefers-color-scheme: dark) {
+  .title { color: #f0ede6; }
+}
+
+.saveBtn {
+  background: #1a1a18;
+  color: #f0ede6;
+  border: none;
+  border-radius: 8px;
+  padding: 7px 16px;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  font-family: inherit;
+  min-width: 60px;
+  transition: opacity 0.15s;
+}
+
+.saveBtn:hover { opacity: 0.75; }
+
+@media (prefers-color-scheme: dark) {
+  .saveBtn { background: #f0ede6; color: #1a1a18; }
+}
+
+.section { padding: 1.25rem 1.25rem 0; }
+
+.sectionLabel {
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #888780;
+  margin-bottom: 10px;
+}
+
+.card {
+  background: #ffffff;
+  border: 0.5px solid rgba(136,135,128,0.3);
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+@media (prefers-color-scheme: dark) {
+  .card { background: #1e1e1c; }
+}
+
+.field {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 16px;
+  gap: 12px;
+}
+
+.fieldLabel {
+  font-size: 14px;
+  color: #1a1a18;
+  flex: 1;
+}
+
+@media (prefers-color-scheme: dark) {
+  .fieldLabel { color: #f0ede6; }
+}
+
+.input {
+  border: 0.5px solid rgba(136,135,128,0.35);
+  background: #f5f4f0;
+  border-radius: 8px;
+  padding: 6px 10px;
+  font-size: 14px;
+  color: #1a1a18;
+  font-family: inherit;
+  width: 100px;
+  text-align: right;
+  outline: none;
+}
+
+.input:focus { border-color: #888780; }
+
+@media (prefers-color-scheme: dark) {
+  .input { background: #2a2a27; color: #f0ede6; }
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 16px;
+  gap: 12px;
+}
+
+.rowLabel {
+  font-size: 14px;
+  color: #1a1a18;
+}
+
+@media (prefers-color-scheme: dark) {
+  .rowLabel { color: #f0ede6; }
+}
+
+.rowVal {
+  font-size: 14px;
+  font-weight: 500;
+  color: #888780;
+}
+
+.divider {
+  height: 0.5px;
+  background: rgba(136,135,128,0.2);
+  margin: 0 16px;
+}
+
+/* Toggle switch */
+.toggle {
+  position: relative;
+  display: inline-block;
+  width: 44px;
+  height: 26px;
+  flex-shrink: 0;
+}
+
+.toggle input { opacity: 0; width: 0; height: 0; }
+
+.toggleSlider {
+  position: absolute;
+  inset: 0;
+  background: #ccc;
+  border-radius: 26px;
+  transition: background 0.2s;
+  cursor: pointer;
+}
+
+.toggleSlider::before {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  left: 3px;
+  bottom: 3px;
+  background: white;
+  border-radius: 50%;
+  transition: transform 0.2s;
+}
+
+.toggle input:checked + .toggleSlider { background: #3B6D11; }
+.toggle input:checked + .toggleSlider::before { transform: translateX(18px); }
+
+/* Buttons */
+.actionBtn {
+  display: block;
+  width: 100%;
+  text-align: left;
+  padding: 13px 16px;
+  background: none;
+  border: none;
+  font-size: 14px;
+  color: #1a1a18;
+  cursor: pointer;
+  font-family: inherit;
+  transition: background 0.1s;
+}
+
+.actionBtn:hover { background: rgba(136,135,128,0.08); }
+
+@media (prefers-color-scheme: dark) {
+  .actionBtn { color: #f0ede6; }
+}
+
+.dangerBtn { color: #A32D2D !important; }
+
+.premiumBtn {
+  background: #1a1a18;
+  color: #f0ede6;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 14px;
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  font-family: inherit;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+@media (prefers-color-scheme: dark) {
+  .premiumBtn { background: #f0ede6; color: #1a1a18; }
+}
