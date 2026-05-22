@@ -1,11 +1,22 @@
 'use client'
+import { useState } from 'react'
+import { loadSettings, saveSettings } from '@/hooks/useStorage'
 import styles from './PremiumGate.module.css'
 
 type Props = { onUnlock: () => void }
 
 export default function PremiumGate({ onUnlock }: Props) {
+  const [showConfirm, setShowConfirm] = useState(false)
+
   const handlePremium = () => {
-    window.location.href = 'https://karabilamahmoud.gumroad.com/l/mkaproduct'
+    window.open('https://karabilamahmoud.gumroad.com/l/mkaproduct', '_blank')
+    setTimeout(() => setShowConfirm(true), 2000)
+  }
+
+  const handleAlreadyBought = () => {
+    const settings = loadSettings()
+    saveSettings({ ...settings, isPremium: true })
+    onUnlock()
   }
 
   return (
@@ -16,6 +27,11 @@ export default function PremiumGate({ onUnlock }: Props) {
       <button className={styles.btn} onClick={handlePremium}>
         Passer à Premium — 2,99€
       </button>
+      {showConfirm && (
+        <button className={styles.btnSecondary} onClick={handleAlreadyBought}>
+          ✓ J'ai déjà acheté — Activer
+        </button>
+      )}
     </div>
   )
 }
